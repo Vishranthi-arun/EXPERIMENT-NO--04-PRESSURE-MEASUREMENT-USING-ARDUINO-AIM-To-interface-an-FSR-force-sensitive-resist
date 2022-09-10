@@ -1,6 +1,4 @@
 # EXPERIMENT-NO--04-PRESSURE-MEASUREMENT-USING-ARDUINO-AIM-To-interface-an-FSR-force-sensitive-resistor
-
-
 ## AIM: 
 To interface an FSR(force sensitive resistor) and scale the output voltage obtained to pressure applied 
  
@@ -76,24 +74,29 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 ### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+```
+*Roll no : 212221230124
+*Name    : Vishranthi A
+*Department and Year : AI & DS - 2nd Year 
+```
+ ```
+ int sensorvalue=A0;
+int newton;
+void setup()
+{
+ Serial.begin(9600);  
+}
+void loop()
+{
+ sensorvalue=analogRead(A0);
+ newton=map(sensorvalue,0,466,0,10);
+ Serial.print("Raw value: ");
+ Serial.println(sensorvalue);
+ Serial.print("force:");
+ Serial.println(newton);
+ delay(1000);
+}
+ ```
 
 ![image](https://user-images.githubusercontent.com/36288975/188804653-a3154e8e-2655-46f2-9dcd-f425dd1ba109.png)
 
@@ -129,4 +132,5 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 
 
 
-### RESULTS : Arduino uno is interfaced with FSR and output values are indicated on a graph.
+### RESULTS : '
+Arduino uno is interfaced with FSR and output values are indicated on a graph.
